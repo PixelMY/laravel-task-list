@@ -1,19 +1,21 @@
 @extends("layouts.app")
 
-@section("title", "Add Task")
+{{-- @section("title", "Add Task") --}}
 
-@section("styles")
+{{-- @section("styles")
 	<style>
 		.error-message {
 			color: red;
 			font-size: 0.8rem;
 		}
 	</style>
-@endsection
+@endsection --}}
 
 @section("content")
+	@include("form")
+
 	{{-- {{ $errors }} --}}
-	<form action="{{ route("tasks.store") }}" method="post">
+	{{-- <form action="{{ route("tasks.store") }}" method="post">
 
 		@csrf
 
@@ -48,5 +50,5 @@
 			<button type="submit">Add Task</button>
 		</div>
 
-	</form>
+	</form> --}}
 @endsection
