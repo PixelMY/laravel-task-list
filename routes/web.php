@@ -79,7 +79,7 @@ Route::get('/tasks', function () {
     // return 'Main Page';
 
     return view('index', [
-        'tasks' => Task::latest()->get()
+        'tasks' => Task::latest()->paginate(10)
     ]);
 })->name('tasks.index');
 
